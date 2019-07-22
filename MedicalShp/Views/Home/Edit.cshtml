@@ -1,0 +1,44 @@
+﻿@model MedicalShp.ViewModel.MedicineViewModel
+
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@using (Html.BeginForm("Edit","Home",FormMethod.Post))
+{
+    <table class="table">
+        <tr>
+            <td>Id</td>
+            <td>@Html.TextBoxFor(x=>x.ID)</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@Html.TextBoxFor(x=>x.Name)</td>
+        </tr>
+        <tr>
+            <td>Brand</td>
+            <td>@Html.TextBoxFor(x=>x.Brand)</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>@Html.TextBoxFor(x=>x.Price)</td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td>@Html.TextBoxFor(x=>x.Quantity)</td>
+        </tr>
+        <tr>
+            <td>ExpiryDate</td>
+            <td>@Html.TextBoxFor(x=>x.ExpiryDate)
+                @Html.ValidationMessageFor(x=>x.ExpiryDate)
+            
+                </td>
+
+        </tr>
+    </table>
+    <input type="submit" value="Update"/>
+}
+
+
+
